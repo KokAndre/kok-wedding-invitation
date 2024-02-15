@@ -9,19 +9,19 @@ body {
 }
 
 h1 {
-    font-family: serif;
-    font-size: 50px;
+    font-family: serif !important;
+    font-size: 50px !important;
 }
 
 h2 {
-    font-family: serif;
-    font-size: 30px;
+    font-family: serif !important;
+    font-size: 30px !important;
 }
 
 
-li {
-    font-family: sans-serif;
-    font-size: 12px;
+p {
+    font-family: sans-serif !important;
+    margin-bottom: 0px;
 }
 
 .center-align-vertical {
