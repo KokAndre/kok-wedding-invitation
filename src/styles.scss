@@ -74,13 +74,13 @@ li {
 .row{display:flex;flex-wrap:wrap;}
 .align-right{text-align: right !important;}
 
-.m-0{margin: 0rem;}
-.m-1{margin: .25rem;}
-.m-2{margin: .5rem;}
-.m-3{margin: .75rem;}
-.m-4{margin: 1rem;}
-.m-5{margin: 1.25rem;}
-.m-6{margin: 1.5rem;}
+.m-0{margin: 0rem !important;}
+.m-1{margin: .25rem !important;}
+.m-2{margin: .5rem !important;}
+.m-3{margin: .75rem !important;}
+.m-4{margin: 1rem !important;}
+.m-5{margin: 1.25rem !important;}
+.m-6{margin: 1.5rem !important;}
 
 .mx-1{margin-left: .25rem;margin-right: .25rem;}
 .mx-2{margin-left: .5rem;margin-right: .5rem;}
