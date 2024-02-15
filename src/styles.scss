@@ -32,12 +32,29 @@ li {
     justify-content: end;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
 .h-100 {
     height: 100%;
 }
 
 .w-100 {
     width: 100&;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.coming-soon {
+    width: 600px;
+    height: 350px;
+    background-image: url('./assets/images/coming-soon.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .col{flex-basis:0;flex-grow:1;max-width:100%}
@@ -57,6 +74,7 @@ li {
 .row{display:flex;flex-wrap:wrap;}
 .align-right{text-align: right !important;}
 
+.m-0{margin: 0rem;}
 .m-1{margin: .25rem;}
 .m-2{margin: .5rem;}
 .m-3{margin: .75rem;}
@@ -106,6 +124,7 @@ li {
 .mb-5{margin-bottom: 1.25rem;}
 .mb-6{margin-bottom: 1.5rem;}
 
+.p-0{padding: 0rem;}
 .p-1{padding: .25rem;}
 .p-2{padding: .5rem;}
 .p-3{padding: .75rem;}

@@ -9,3 +9,15 @@
     // background-image: linear-gradient(black, lightgrey);
     background-color: rgb(172 138 108);
 }
+
+.active-nav-link {
+    border: 1px solid rgb(172 138 108) !important;
+    border-radius: 6px;
+    // font-size: 16px !important;
+    // font-weight: 800;
+
+}
+
+.transparent-border {
+    border: 1px solid transparent;
+}
