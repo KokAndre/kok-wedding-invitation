@@ -1,6 +1,17 @@
-<div class="row w-100 justify-content-center mt-6">
+<!-- <div class="row w-100 justify-content-center mt-6">
     <h2>Wedding Party Coming Soon</h2>
 </div>
 <div class="row w-100 justify-content-center mt-6">
     <div class="coming-soon"></div>
+</div> -->
+
+
+<div class="row mt-6">
+    <div *ngFor="let participent of weddingPartyParticipents" class="col-4">
+        <div class="participent-container">
+            <div style="--imageName: ../../../assets/images/wedding-party/{{participent.imageName}}.jpeg" class="participent-image"></div>
+            <p [innerHTML]="participent.fullName" class="text-size-16"></p>
+            <p [innerHTML]="participent.description"></p>
+        </div>
+    </div>
 </div>
