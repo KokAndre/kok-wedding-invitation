@@ -1,20 +1,16 @@
 .participent-container {
     border-radius: 25%;
-    padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 10px 18px rgb(172 138 108);
+    width: 15vw;
+    margin-bottom: 3rem;
 }
 
 .participent-image {
     width: 100px;
     height: 100px;
-    background-image: url(var(--imageName));
-    background-size: contain;
-    background-position: center;
+    background-image: var(--imageName);
+    background-size: cover;
+    background-position: top;
     background-repeat: no-repeat;
-    border-radius: 10%;
+    border-radius: 30%;
 }
-
-// https://blog.wedsites.com/10-beautiful-wedding-website-examples-to-inspire-you/
-// https://blog.coderfy.io/css-variables-dont-work-with-the-url-function
-//ng build --base-href "https://KokAndre.github.io/kok-wedding-invitation/"
-// npx angular-cli-ghpages --dir=dist/kok-wedding-invitation"

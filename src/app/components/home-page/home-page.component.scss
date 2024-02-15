@@ -1,0 +1,31 @@
+.home-image-banner {
+    height: 300px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    // border-radius: 10%;
+}
+
+.image-1 {
+    background-image: url('../../../assets/images/home-page/home-page-1.jpeg');
+}
+
+.image-2 {
+    background-image: url('../../../assets/images/home-page/home-page-2.jpeg');
+}
+
+.image-3 {
+    background-image: url('../../../assets/images/home-page/home-page-3.jpeg');
+}
+
+.names-container {
+    width: 50vw;
+}
+
+.name-line {
+    width: 100%;
+    height: 4px;
+    // background-image: linear-gradient(black, lightgrey);
+    background-color: rgb(172 138 108);
+    margin-bottom: 16px;
+}

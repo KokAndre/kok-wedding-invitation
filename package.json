@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build": "ng build --base-href \"https://KokAndre.github.io/kok-wedding-invitation/\"",
+    "deploy": "npx angular-cli-ghpages --dir=dist/kok-wedding-invitation"
   },
   "private": true,
   "dependencies": {
