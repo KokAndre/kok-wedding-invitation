@@ -1,5 +1,5 @@
 <div class="row mt-6">
-    <div *ngFor="let participent of weddingPartyParticipents" class="col-4">
+    <div *ngFor="let participent of weddingPartyParticipents" class="col-3">
         <div class="participent-container mx-auto p-4">
             <div style="background-image: url(assets/images/wedding-party/{{participent.imageName}}.jpeg)" class="participent-image mx-auto mb-3"></div>
             <p [innerHTML]="participent.fullName" class="text-size-18 font-weight-semi-bold text-center"></p>
