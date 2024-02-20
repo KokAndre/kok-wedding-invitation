@@ -1,0 +1,27 @@
+.schedule-image {
+    width: 300px;
+    height: 250px;
+    // background-image: url(../../../assets/images/schedule/welcome-drinks.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    // border-radius: 30%;
+}
+
+.center-schedule-line {
+    width: 5px;
+    height: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: -20px !important;
+    background-color: rgb(172 138 108);
+}
+
+.center-schedule-line-item {
+    width: 20px;
+    height: 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: rgb(172 138 108);
+    border-radius: 50%;
+}

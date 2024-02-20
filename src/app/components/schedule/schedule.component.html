@@ -1,6 +1,39 @@
-<div class="row w-100 justify-content-center mt-6">
+<!-- <div class="row w-100 justify-content-center mt-6">
     <h2>Schedule Coming Soon</h2>
 </div>
 <div class="row w-100 justify-content-center mt-6">
     <div class="coming-soon"></div>
+</div> -->
+
+<h1 class="my-6 text-center">Schedule</h1>
+
+<div *ngFor="let scheduleItem of scheduleList; let i = index; let last = last" [ngClass]="{last: 'pb-6'}">
+    <div class="mx-6 justify-content-center" [ngClass]="(i + 1)%2 ? 'row' : 'reverse-row'">
+        <div class="col-5 schedule-image" style="background-image: url(assets/images/schedule/{{scheduleItem.imageName}})">
+        </div>
+        <div class="col-1">
+            <div class="center-schedule-line-item"></div>
+            <div class="center-schedule-line"></div>
+        </div>
+        <div class="col-5 center-align-vertical">
+            <p class="text-size-22 mb-6" [innerHTML]="scheduleItem.heading"></p>
+            <p class="text-size-16 mb-6" [innerHTML]="scheduleItem.time"></p>
+            <p class="text-size-16 mb-0" [innerHTML]="scheduleItem.description"></p>
+        </div>
+    </div>
 </div>
+
+
+<!-- <div class="reverse-row mx-6 justify-content-center">
+    <div class="col-5 schedule-image">
+    </div>
+    <div class="col-1">
+        <div class="center-schedule-line-item"></div>
+        <div class="center-schedule-line"></div>
+    </div>
+    <div class="col-5 center-align-vertical">
+        <p class="text-size-22">Drinks</p>
+        <p class="">5:00pm</p>
+        <p class="">Drinks text description goed here, long text here</p>
+    </div>
+</div> -->

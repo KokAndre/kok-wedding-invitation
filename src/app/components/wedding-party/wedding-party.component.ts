@@ -61,7 +61,7 @@ export class WeddingPartyComponent implements OnInit {
 
   ngOnInit(): void {
     this.weddingPartyParticipents = WeddingPartyList;
-    console.log('WEDDING PARTY DATA: ',)
+    console.log('WEDDING PARTY DATA: ', this.weddingPartyParticipents)
   }
 
 

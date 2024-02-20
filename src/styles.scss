@@ -64,6 +64,10 @@ p {
     font-size: 18px !important;
 }
 
+.text-size-22 {
+    font-size: 22px !important;
+}
+
 .font-style-italic {
     font-style: italic !important;
 }
@@ -141,6 +145,11 @@ p {
 }
 .row {
     display: flex;
+    flex-wrap: wrap;
+}
+.reverse-row {
+    display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
 }
 .align-right {
