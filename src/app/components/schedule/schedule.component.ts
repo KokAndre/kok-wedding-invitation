@@ -31,13 +31,13 @@ const scheduleListItems = [
     "heading": "Dinner time",
     "description": "Enjoy a buffet style dinner in the beautiful reception.",
     "time": "7:30pm",
-    "imageName": "dinner-reception.jpg"
+    "imageName": "dinner-reception.webp"
   },
   {
     "heading": "Dancing and drinks",
     "description": "Time to let loose and celebrate the newlyweds!",
     "time": "8:30pm",
-    "imageName": "dancing-and-drinks.jpg"
+    "imageName": "dancing-and-drinks.jpeg"
   }
 ]
 
