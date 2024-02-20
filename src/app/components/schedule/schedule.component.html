@@ -2,13 +2,13 @@
 
 <div *ngFor="let scheduleItem of scheduleList; let i = index; let first = first; let last = last" [ngClass]="{'pb-6': last}">
     <div class="mx-6 justify-content-center" [ngClass]="(i + 1)%2 ? 'row' : 'reverse-row text-right'">
-        <div class="col-5 schedule-image" style="background-image: url(assets/images/schedule/{{scheduleItem.imageName}})">
+        <div class="col-4 schedule-image" style="background-image: url(assets/images/schedule/{{scheduleItem.imageName}})">
         </div>
         <div class="col-1">
             <div class="center-schedule-line" [ngClass]="{'first-item': first, 'last-item': last}"></div>
             <div class="center-schedule-line-item"></div>
         </div>
-        <div class="col-5 center-align-vertical">
+        <div class="col-4 center-align-vertical">
             <p class="text-size-22 mb-6" [innerHTML]="scheduleItem.heading"></p>
             <p class="text-size-16 mb-6" [innerHTML]="scheduleItem.time"></p>
             <p class="text-size-16 mb-0" [innerHTML]="scheduleItem.description"></p>
