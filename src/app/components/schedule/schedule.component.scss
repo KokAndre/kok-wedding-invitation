@@ -1,6 +1,6 @@
 .schedule-image {
     width: 300px;
-    height: 250px;
+    height: 300px;
     // background-image: url(../../../assets/images/schedule/welcome-drinks.jpg);
     background-size: cover;
     background-position: top;
@@ -13,7 +13,6 @@
     height: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: -20px !important;
     background-color: rgb(172 138 108);
 }
 
@@ -22,6 +21,17 @@
     height: 20px;
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-top: -135px !important;
     background-color: rgb(172 138 108);
     border-radius: 50%;
+}
+
+.first-item {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.last-item {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
