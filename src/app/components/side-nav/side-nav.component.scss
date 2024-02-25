@@ -21,3 +21,8 @@
 .transparent-border {
     border: 1px solid transparent;
 }
+
+.body-container {
+    width: 100vw;
+    height: calc(100vh - 100px);
+}
