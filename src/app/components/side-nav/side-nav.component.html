@@ -1,50 +1,138 @@
 <!-- Header -->
-<div class="header row mx-4">
-    <div class="col-3 center-align-vertical">
-        <h2 class="m-0">Vicky & Andre</h2>
-    </div>
-    <div class="col-9 align-right center-align-vertical">
-
-        <div class="row h-100 w-100 justify-content-end">
-
-            <div class="pointer transparent-border" [routerLink]="['/home-page']" routerLinkActive="active-nav-link">
-                <p class="m-2">Home</p>
-            </div>
-
-            <div class="pointer transparent-border" [routerLink]="['/wedding-party']" routerLinkActive="active-nav-link">
-                <p class="m-2">Wedding Party</p>
-            </div>
-
-            <div class="pointer transparent-border" [routerLink]="['/venue']" routerLinkActive="active-nav-link">
-                <p class="m-2">Venue</p>
-            </div>
-
-            <div class="pointer transparent-border" [routerLink]="['/schedule']" routerLinkActive="active-nav-link">
-                <p class="m-2">Schedule</p>
-            </div>
-
-            <div class="pointer transparent-border" [routerLink]="['/dress-code']" routerLinkActive="active-nav-link">
-                <p class="m-2">Dress Code</p>
-            </div>
-
-            <div class="pointer transparent-border" [routerLink]="['/accommodation']" routerLinkActive="active-nav-link">
-                <p class="m-2">Accommodation</p>
-            </div>
-
-
-            <div class="pointer transparent-border" [routerLink]="['/rsvp']" routerLinkActive="active-nav-link">
-                <p class="m-2">RSVP</p>
-            </div>
+<div class="main-container">
+    <div class="header row mx-4">
+        <div class="col-3 center-align-vertical">
+            <h2 class="m-0">Vicky & Andre</h2>
         </div>
+        <div class="col-9 align-right center-align-vertical">
+
+            <div class="row h-100 w-100 justify-content-end">
+
+                <!-- <div class="pointer transparent-border" [routerLink]="['/home-page']"
+                    routerLinkActive="active-nav-link">
+                    <p class="m-2">Home</p>
+                </div>
+
+                <div class="pointer transparent-border" [routerLink]="['/wedding-party']"
+                    routerLinkActive="active-nav-link">
+                    <p class="m-2">Wedding Party</p>
+                </div>
+
+                <div class="pointer transparent-border" [routerLink]="['/venue']" routerLinkActive="active-nav-link">
+                    <p class="m-2">Venue</p>
+                </div>
+
+                <div class="pointer transparent-border" [routerLink]="['/schedule']" routerLinkActive="active-nav-link">
+                    <p class="m-2">Schedule</p>
+                </div>
+
+                <div class="pointer transparent-border" [routerLink]="['/dress-code']"
+                    routerLinkActive="active-nav-link">
+                    <p class="m-2">Dress Code</p>
+                </div>
+
+                <div class="pointer transparent-border" [routerLink]="['/accommodation']"
+                    routerLinkActive="active-nav-link">
+                    <p class="m-2">Accommodation</p>
+                </div>
+
+
+                <div class="pointer transparent-border" [routerLink]="['/rsvp']" routerLinkActive="active-nav-link">
+                    <p class="m-2">RSVP</p>
+                </div> -->
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Home)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Home}">
+                    <p class="m-2">Home</p>
+                </div>
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.WeddingParty)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.WeddingParty}">
+                    <p class="m-2">Wedding Party</p>
+                </div>
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Venue)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Venue}">
+                    <p class="m-2">Venue</p>
+                </div>
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Schedule)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Schedule}">
+                    <p class="m-2">Schedule</p>
+                </div>
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.DressCode)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.DressCode}">
+                    <p class="m-2">Dress Code</p>
+                </div>
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Accommodation)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Accommodation}">
+                    <p class="m-2">Accommodation</p>
+                </div>
+
+
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.RSVP)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVP}">
+                    <p class="m-2">RSVP</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="header-bottom-border"></div>
+    <!-- End of Header -->
+
+    <!-- Body -->
+    <div class="content-container" id="content-container">
+        <!-- <router-outlet></router-outlet> -->
+
+
+        <ng-container [ngSwitch]="activeScreen">
+            <ng-container *ngSwitchCase="availableScreens.Home" [ngTemplateOutlet]="HomeTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.WeddingParty" [ngTemplateOutlet]="WeddingPartyTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.Venue" [ngTemplateOutlet]="VenueTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.Schedule" [ngTemplateOutlet]="ScheduleTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.DressCode" [ngTemplateOutlet]="DressCodeTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.Accommodation" [ngTemplateOutlet]="AccommodationTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.RSVP" [ngTemplateOutlet]="RSVPTemplate">
+            </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.ErrorScreen" [ngTemplateOutlet]="ErrorScreenTemplate">
+            </ng-container>
+        </ng-container>
 
     </div>
+    <!-- End of Body -->
 </div>
 
-<div class="header-bottom-border"></div>
-<!-- End of Header -->
+<ng-template #HomeTemplate>
+    <app-home-page></app-home-page>
+</ng-template>
 
-<!-- Body -->
-<div class="body-container">
-    <router-outlet></router-outlet>
-</div>
-<!-- End of Body -->
+<ng-template #WeddingPartyTemplate>
+    <app-wedding-party></app-wedding-party>
+</ng-template>
+
+<ng-template #VenueTemplate>
+    <app-venue></app-venue>
+</ng-template>
+
+<ng-template #ScheduleTemplate>
+    <app-schedule></app-schedule>
+</ng-template>
+
+<ng-template #DressCodeTemplate>
+    <app-dress-code></app-dress-code>
+</ng-template>
+
+<ng-template #AccommodationTemplate>
+    <app-accommodation></app-accommodation>
+</ng-template>
+
+<ng-template #RSVPTemplate>
+    <app-rsvp></app-rsvp>
+</ng-template>
+
+<ng-template #ErrorScreenTemplate>
+    <app-error-screen [screenHeader]="errorScreenHeader" [screenMessage]="errorScreenMessage"></app-error-screen>
+</ng-template>

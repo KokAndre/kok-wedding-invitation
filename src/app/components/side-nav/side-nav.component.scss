@@ -21,12 +21,20 @@
     border: 1px solid transparent;
 }
 
-.body-container {
+.main-container {
+    min-height: 100vh;
+    margin: 0 auto -81px;
+    min-width: 1060px !important;
     width: 100%;
+    background-image: url('../../../assets/images/background-wood.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content-container {
+    overflow-y: auto;
     height: calc(100vh - 104px);
-    // background-image: url('../../../assets/images/background-wood.jpg');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // opacity: 40%;
+    min-width: 1060px !important;
+    width: 100%;
 }

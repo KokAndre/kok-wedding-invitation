@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -21,9 +21,17 @@ export class HomePageComponent implements OnInit {
   public displayMinutes: any;
   public displaySeconds: any;
 
+  constructor(public ref: ChangeDetectorRef){ }
+
 
   ngOnInit(): void {
     this.myTimer();
+  }
+
+  public countDown() {
+    setTimeout(() => {
+      this.myTimer();
+    }, 1000)
   }
 
   public myTimer() {
@@ -49,7 +57,11 @@ export class HomePageComponent implements OnInit {
     this.displayMinutes = this.minutes;
     this.displaySeconds = this.seconds;
 
-    setInterval(this.myTimer, 1000);
+    if (this.displayDays === 0 && this.displayHours === 0 && this.displayMinutes === 0 && this.displaySeconds === 0) {
+      // Do not execure the count down again
+    } else {
+      this.countDown();
+    }
   }
 
 }

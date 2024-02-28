@@ -14,6 +14,8 @@ import { AccommodationComponent } from './components/accommodation/accommodation
 import { RsvpComponent } from './components/rsvp/rsvp.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
+import { ErrorScreenComponent } from './components/error-screen/error-screen.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { MatFormField } from '@angular/material/form-field';
     ScheduleComponent,
     DressCodeComponent,
     AccommodationComponent,
-    RsvpComponent
+    RsvpComponent,
+    ErrorScreenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
+    HttpClientModule
     // MatFormField
   ],
   exports: [

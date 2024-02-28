@@ -11,17 +11,8 @@ import { RsvpComponent } from './components/rsvp/rsvp.component';
 
 const routes: Routes = [
   {
-    path: '', component: SideNavComponent, children: [
-      { path: '', redirectTo: 'home-page', pathMatch: 'full' },
-      { path: 'home-page', component: HomePageComponent },
-      { path: 'wedding-party', component: WeddingPartyComponent },
-      { path: 'venue', component: VenueComponent },
-      { path: 'schedule', component: ScheduleComponent },
-      { path: 'dress-code', component: DressCodeComponent },
-      { path: 'accommodation', component: AccommodationComponent },
-      { path: 'rsvp', component: RsvpComponent },
-    ]
-  },
+    path: '**', component: SideNavComponent
+  }
 
 ];
 
