@@ -37,7 +37,7 @@ export class RsvpComponent implements OnInit {
   }
 
   public getAll() {
-    const serviceEndpoint = 'https://dcbmedia.co.za/andre/participents/read-all.php/';
+    const serviceEndpoint = 'https://kok-wedding-invitation-api.000webhostapp.com/participents/read-all.php';
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
