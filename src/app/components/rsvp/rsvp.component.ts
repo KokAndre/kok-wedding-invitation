@@ -22,17 +22,15 @@ export class RsvpComponent implements OnInit {
 
   testJsonAdd() {
 
-//     fetch('http://kok-wedding-invitation.great-site.net/participents/read-all.php', {
-//   headers: {
-//     'Referrer-Policy': 'no-referrer'
-//   }
-// })
-//   .then(response => response.json())
-//   .then(data => console.log(data));
+    fetch('https://kok-wedding-invitation-api.000webhostapp.com/participents/read-all.php', {
+      method: 'get'
+    })
+      .then(response => response.json())
+      .then(data => console.log(data));
 
-    this.getAll().subscribe(result => {
-      console.log('RESULT: ', result);
-    });
+    // this.getAll().subscribe(result => {
+    //   console.log('RESULT: ', result);
+    // });
 
   }
 
