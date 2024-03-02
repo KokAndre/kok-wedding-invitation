@@ -130,7 +130,7 @@
 </ng-template>
 
 <ng-template #RSVPTemplate>
-    <app-rsvp></app-rsvp>
+    <app-rsvp [userData]="activeUserData" (navigateToErrorScreenEmit)="naviagteToErrorScreen($event)"></app-rsvp>
 </ng-template>
 
 <ng-template #ErrorScreenTemplate>

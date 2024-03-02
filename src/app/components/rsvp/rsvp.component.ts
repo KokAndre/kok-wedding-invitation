@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, throwError } from 'rxjs';
+import { WeddingParticipentsData } from 'src/app/models/wedding-participents-data.model';
 // import * as dbData from './db.json';
 
 @Component({
@@ -9,15 +10,21 @@ import { catchError, map, throwError } from 'rxjs';
   styleUrls: ['./rsvp.component.scss']
 })
 export class RsvpComponent implements OnInit {
+  @Input() public userData = new WeddingParticipentsData();
+
+  @Output() public navigateToErrorScreenEmit: EventEmitter<any> = new EventEmitter<any>();
+
   public countValue = 10;
   public dataArray = [{ id: 0, name: '' }];
 
   constructor(public http: HttpClient) { }
 
   ngOnInit(): void {
-    //  console.log('DB DATA: ', dbData);
-    //  this.dataArray = dbData;
-    //  console.log('DATA ARRAY: ', this.dataArray);
+    console.log('USER DATA ON RSVP: ', this.userData);
+    if (!this.userData.firstName || !this.userData.lastName) {
+      console.log('IN THE IF!!!!!!!!!!!!!!!!!!!');
+      this.navigateToErrorScreenEmit.emit({errorHeader: 'No user found', errorMessage: 'Something went wrong, no user could be found.'})
+    }
   }
 
   testJsonAdd() {

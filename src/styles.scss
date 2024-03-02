@@ -8,6 +8,29 @@ body {
     background-color: #e8e1d1;
 }
 
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #cecfcf #eeeeee;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #eeeeee;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #cecfcf;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+}
+
 h1 {
     font-family: "Lora", serif !important;
     font-style: normal;
@@ -43,6 +66,10 @@ p {
 
 .text-right {
     text-align: right;
+}
+
+.text-capitilize {
+    text-transform: capitalize;
 }
 
 .h-100 {
@@ -472,5 +499,11 @@ p {
     padding-bottom: 1.5rem !important;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

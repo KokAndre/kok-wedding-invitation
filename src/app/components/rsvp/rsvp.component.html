@@ -1,8 +1,26 @@
-<div class="row w-100 justify-content-center mt-6">
+<!-- <div class="row w-100 justify-content-center mt-6">
     <h2>RSVP Coming Soon</h2>
 </div>
 <div class="row w-100 justify-content-center mt-6">
     <div class="coming-soon"></div>
 </div>
 
-<button (click)="testJsonAdd()">TEST HTTP CALL</button>
+<button (click)="testJsonAdd()">TEST HTTP CALL</button> -->
+
+<!-- <div class="col-6 mx-auto">
+    <mat-form-field class="col-12 px-0">
+        <mat-label>Name</mat-label>
+        <input style="color: black;" matInput required maxlength="50"
+            formControlName="accountHolderName">
+        <mat-error *ngIf="accountHolderName.hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+</div> -->
+
+
+<div class="row w-100 justify-content-center mt-6">
+    <h2 class="text-capitilize">Hello {{ userData.firstName }} {{userData.lastName}}</h2>
+</div>
+
+<div *ngIf="userData.rsvpUpdateDate" class="mt-6">
+    <p></p>
+</div>

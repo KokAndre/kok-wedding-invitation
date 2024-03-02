@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
 import { ErrorScreenComponent } from './components/error-screen/error-screen.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    HttpClientModule
-    // MatFormField
+    HttpClientModule,
+    MaterialModule
   ],
   exports: [
-    MatInputModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
