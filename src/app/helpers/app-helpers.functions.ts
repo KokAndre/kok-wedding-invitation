@@ -35,3 +35,13 @@ export class SessionStorageHelper {
     }
 
 }
+
+export class AppHelpers {
+    static getApiUrl() {
+        return 'https://kok-wedding-invitation-api.000webhostapp.com/participents/get.php';
+    }
+    
+    static postApiUrl() {
+        return 'https://kok-wedding-invitation-api.000webhostapp.com/participents/post.php';
+    }
+}

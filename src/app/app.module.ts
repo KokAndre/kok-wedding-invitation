@@ -17,6 +17,7 @@ import { MatFormField } from '@angular/material/form-field';
 import { ErrorScreenComponent } from './components/error-screen/error-screen.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MaterialModule } from './material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     MaterialModule

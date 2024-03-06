@@ -16,6 +16,9 @@ export class RsvpComponent implements OnInit {
 
   public countValue = 10;
   public dataArray = [{ id: 0, name: '' }];
+  public displayCaptureRSVP = false;
+  public rsvpStatus = '';
+  public displayErrorMessage = false;
 
   constructor(public http: HttpClient) { }
 
@@ -59,5 +62,15 @@ export class RsvpComponent implements OnInit {
 
         // return throwError(new AppError(error)) as Observable<any>;
       }));
+  }
+
+  public submitRSVP() {
+    console.log('RSVP STATUS: ', this.rsvpStatus);
+
+    if(!this.rsvpStatus) {
+      this.displayErrorMessage = true;
+    } else {
+      this.displayErrorMessage = false;
+    }
   }
 }

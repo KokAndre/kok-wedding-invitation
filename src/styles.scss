@@ -3,48 +3,68 @@
 html,
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
     color: #e8e1d1;
     background-color: #e8e1d1;
+
+    font-family: "Dancing Script", cursive !important;
+    letter-spacing: 2px;
+    font-optical-sizing: auto;
+    // font-weight: <weight>;
+    // font-style: normal;
+    font-variation-settings:
+      "BNCE" 0,
+      "INFM" 0,
+      "SPAC" 0;
 }
 
-/* Firefox */
-* {
-    scrollbar-width: auto;
-    scrollbar-color: #cecfcf #eeeeee;
+.mat-mdc-raised-button  {
+    font-family: "Dancing Script", cursive !important;
+    letter-spacing: 2px;
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "BNCE" 0,
+      "INFM" 0,
+      "SPAC" 0;
 }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked
+  .mat-radio-outer-circle {
+  border-color: #e8e1d1 !important; /*change radio button color when selected*/
 }
 
-*::-webkit-scrollbar-track {
-    background: #eeeeee;
-    border-radius: 10px;
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #e8e1d1 !important; /*change radio button inner circle color */
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: #cecfcf;
-    border-radius: 10px;
-    border: 1px solid #eeeeee;
+::ng-deep .mat-radio-outer-circle {
+  border: 1px solid #e8e1d1 !important; /*change radio button not checked border */
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: #e8e1d1 !important; /* change click effect color */
 }
 
 h1 {
-    font-family: "Lora", serif !important;
+    // font-family: "Lora", serif !important;
+    font-family: "Dancing Script", cursive !important;
+    letter-spacing: 2px;
     font-style: normal;
     font-size: 50px !important;
 }
 
 h2 {
-    font-family: "Lora", serif !important;
+    // font-family: "Lora", serif !important;
+    font-family: "Dancing Script", cursive !important;
+    letter-spacing: 2px;
     font-style: normal;
     font-size: 30px !important;
 }
 
 p {
-    font-family: sans-serif !important;
+    // font-family: sans-serif !important;
+    font-family: "Dancing Script", cursive !important;
+    letter-spacing: 2px;
     margin-bottom: 0px;
 }
 
@@ -96,6 +116,10 @@ p {
     font-size: 22px !important;
 }
 
+.text-size-30 {
+    font-size: 30px !important;
+}
+
 .font-style-italic {
     font-style: italic !important;
 }
@@ -106,6 +130,10 @@ p {
 
 .width-fit-content {
     width: fit-content !important;
+}
+
+.error-text {
+    color: #ff6f6f !important;
 }
 
 .coming-soon {

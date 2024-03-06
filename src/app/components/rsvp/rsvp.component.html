@@ -1,26 +1,32 @@
-<!-- <div class="row w-100 justify-content-center mt-6">
-    <h2>RSVP Coming Soon</h2>
-</div>
-<div class="row w-100 justify-content-center mt-6">
-    <div class="coming-soon"></div>
-</div>
-
-<button (click)="testJsonAdd()">TEST HTTP CALL</button> -->
-
-<!-- <div class="col-6 mx-auto">
-    <mat-form-field class="col-12 px-0">
-        <mat-label>Name</mat-label>
-        <input style="color: black;" matInput required maxlength="50"
-            formControlName="accountHolderName">
-        <mat-error *ngIf="accountHolderName.hasError('required')">Name is required</mat-error>
-    </mat-form-field>
-</div> -->
-
-
-<div class="row w-100 justify-content-center mt-6">
-    <h2 class="text-capitilize">Hello {{ userData.firstName }} {{userData.lastName}}</h2>
+<div class="col-12 w-100 justify-content-center mt-6">
+    <h1 class="text-capitilize text-center">Hello {{ userData.firstName }} {{userData.lastName}}</h1>
 </div>
 
 <div *ngIf="userData.rsvpUpdateDate" class="mt-6">
-    <p></p>
+    <h2 class="text-center pt-6">On <span>{{ userData.rsvpUpdateDate| date:'mediumDate' }}</span> you RSVP'd: <span
+            class="text-capitilize">{{ userData.rsvpStatus }}</span></h2>
+
+    <div *ngIf="!displayCaptureRSVP" class="row justify-content-center pt-6">
+        <button mat-raised-button class="mx-auto text-size-22" (click)="displayCaptureRSVP = true">Change RSVP</button>
+    </div>
+</div>
+
+<div *ngIf="displayCaptureRSVP" class="pt-6 col-6 mx-auto text-center">
+
+    <h2 class="">Please set RSVP status:</h2>
+
+    <mat-radio-group class="col-12" [(ngModel)]="rsvpStatus">
+        <mat-radio-button  value="accepted">
+            <p class="mb-0 text-size-30">Accept</p>
+        </mat-radio-button>
+        <mat-radio-button value="declined">
+            <p class="mb-0 text-size-30">Decline</p>
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <div class="row justify-content-center pt-6">
+        <button mat-raised-button class="mx-auto text-size-22" (click)="submitRSVP()">Submit</button>
+    </div>
+
+    <h2 *ngIf="displayErrorMessage && !rsvpStatus" class="error-text mt-6"><span class="text-size-30">*</span> Please select an RSVP value!</h2>
 </div>
