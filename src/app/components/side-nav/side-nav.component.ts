@@ -70,7 +70,7 @@ export class SideNavComponent implements OnInit {
   }
 
   public fetchUsers() {
-    let requestURL = 'https://kok-wedding-invitation-api.000webhostapp.com/participents/fetch-all.php';
+    let requestURL = 'https://kok-wedding-invitation-api.000webhostapp.com/participents/read-all.php';
 
     // if first name and last name is provided then only fetch their data
     if (this.activeUserFirstName && this.activeUserLastName) {
