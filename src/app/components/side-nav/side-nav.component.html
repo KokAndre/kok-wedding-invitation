@@ -65,7 +65,7 @@
                     <p class="m-2 text-size-22">RSVP</p>
                 </div>
 
-                <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.RSVPStatus)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
+                <div *ngIf="activeUserData.isAdmin === '1'" class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.RSVPStatus)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
                     <p class="m-2 text-size-22">RSVP Status</p>
                 </div>
               </mat-menu>
@@ -103,7 +103,7 @@
 </div>
 
 <ng-template #HomeTemplate>
-    <app-home-page [isMobileView]="isMobileView"></app-home-page>
+    <app-home-page [isAdmin]="activeUserData.isAdmin === '1'" [isMobileView]="isMobileView"></app-home-page>
 </ng-template>
 
 <!-- <ng-template #WeddingPartyTemplate>
