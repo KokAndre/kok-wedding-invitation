@@ -1,15 +1,18 @@
 .participent-container {
     border-radius: 25%;
     box-shadow: 5px 10px 18px #e8e1d1;
-    background-color: rgb(232 225 209 / 40%);
     width: 170px;
     margin-bottom: 3rem;
+
+     background-image: url('../../../assets/images/wedding-prticipent-image-2.jpg');
+     background-size: cover;
+     background-position: top;
+     background-repeat: no-repeat;
 }
 
 .participent-image {
     width: 100px;
     height: 100px;
-    // background-image: var(--imageName);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

@@ -1,7 +1,14 @@
-<div class="row mt-5">
+<div *ngIf="!isMobileView" class="row mt-5 px-4">
     <div class="col-4 home-image-banner image-1"></div>
     <div class="col-4 home-image-banner image-2"></div>
     <div class="col-4 home-image-banner image-3"></div>
+</div>
+
+<div *ngIf="isMobileView" class="row mt-5 px-4">
+    <div class="col-6 mobile-home-image-banner image-1"></div>
+    <div class="col-6 mobile-home-image-banner image-2"></div>
+    <div class="col-6 mobile-home-image-banner image-3"></div>
+    <div class="col-6 mobile-home-image-banner image-4"></div>
 </div>
 
 <div class="names-container mx-auto mt-6">

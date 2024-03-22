@@ -1,0 +1,36 @@
+::ng-deep .mat-expansion-panel{
+    background-color: transparent !important;
+    border: 2px solid rgba(232, 225, 209) !important;
+}
+
+::ng-deep .mat-expansion-panel-header {
+    height: fit-content;
+    min-height: 48px;
+}
+
+::ng-deep .mat-expansion-panel-header.mat-expanded {
+    height: fit-content;
+    min-height: 48px;
+}
+
+::ng-deep .mat-expansion-panel-body{
+    padding: 0.75rem !important;
+    border-top: 1px dashed #e8e1d1;
+}
+
+.expansion-panel-header-row {
+    width: 100%;
+}
+
+.expansion-panel-icon{
+    height: 40px !important;
+    width: 40px !important;
+    font-size: 40px !important;
+    color: #e8e1d1;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.rotate-expansion-panel-icon {
+    transform: rotate(180deg);
+}

@@ -7,9 +7,27 @@
     background-repeat: no-repeat;
 }
 
+.mobile-venue-logo {
+    background-image: url(../../../assets/images/venue/venue-logo-no-background.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 40vw;
+}
+
 .google-maps-image {
     width: 800px;
     height: 400px;
+    background-image: url(../../../assets/images/venue/google-maps-image.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.mobile-google-maps-image {
+    width: 90vw;
+    height: 60vw;
     background-image: url(../../../assets/images/venue/google-maps-image.png);
     background-size: cover;
     background-position: top;
@@ -22,6 +40,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid;
+    border-radius: 30px;
+    box-sizing: border-box;
 }
 
 .image-1 {

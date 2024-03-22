@@ -1,11 +1,17 @@
 .schedule-image {
     width: 300px;
     height: 300px;
-    // background-image: url(../../../assets/images/schedule/welcome-drinks.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    // border-radius: 30%;
+}
+
+.mobile-schedule-image {
+    width: 100%;
+    height: 260px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 .center-schedule-line {

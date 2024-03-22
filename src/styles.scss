@@ -1,53 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    overflow: hidden !important;
+}
 
 html,
 body {
     margin: 0;
     // font-family: Roboto, "Helvetica Neue", sans-serif;
-    color: #e8e1d1;
+    color: #e8e1d1 !important;
     background-color: #e8e1d1;
+    height: 100%;
 
     font-family: "Dancing Script", cursive !important;
+    // font-family: 'Mynerve';
     letter-spacing: 2px;
     font-optical-sizing: auto;
     // font-weight: <weight>;
     // font-style: normal;
-    font-variation-settings:
-      "BNCE" 0,
-      "INFM" 0,
-      "SPAC" 0;
+    // font-variation-settings:
+    //     "BNCE" 0,
+    //     "INFM" 0,
+    //     "SPAC" 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.mat-mdc-raised-button  {
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+// @font-face {
+//     font-family: 'Mynerve';
+//     src: url('assets/fonts/Taranis.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+.mat-mdc-raised-button {
     font-family: "Dancing Script", cursive !important;
+    // font-family: 'Mynerve';
     letter-spacing: 2px;
     font-optical-sizing: auto;
     font-variation-settings:
-      "BNCE" 0,
-      "INFM" 0,
-      "SPAC" 0;
+        "BNCE" 0,
+        "INFM" 0,
+        "SPAC" 0;
 }
 
-::ng-deep .mat-radio-button.mat-accent.mat-radio-checked
-  .mat-radio-outer-circle {
-  border-color: #e8e1d1 !important; /*change radio button color when selected*/
+.mat-mdc-radio-button .mdc-form-field {
+    color: #e8e1d1;
 }
 
-::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
-  background-color: #e8e1d1 !important; /*change radio button inner circle color */
-}
-
-::ng-deep .mat-radio-outer-circle {
-  border: 1px solid #e8e1d1 !important; /*change radio button not checked border */
-}
-
-::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
-  background-color: #e8e1d1 !important; /* change click effect color */
+.mat-mdc-radio-button.mat-accent {
+    --mdc-radio-disabled-selected-icon-color: #e8e1d1;
+    --mdc-radio-disabled-unselected-icon-color: #e8e1d1;
+    --mdc-radio-unselected-focus-icon-color: #e8e1d1;
+    --mdc-radio-unselected-hover-icon-color: #e8e1d1;
+    --mdc-radio-unselected-icon-color: #e8e1d1;
+    --mdc-radio-unselected-pressed-icon-color: #e8e1d1;
+    --mdc-radio-selected-focus-icon-color: #e8e1d1;
+    --mdc-radio-selected-hover-icon-color: #e8e1d1;
+    --mdc-radio-selected-icon-color: #e8e1d1;
+    --mdc-radio-selected-pressed-icon-color: #e8e1d1;
+    --mat-mdc-radio-ripple-color: #0e8e1d100;
+    --mat-mdc-radio-checked-ripple-color: #e8e1d1;
 }
 
 h1 {
     // font-family: "Lora", serif !important;
     font-family: "Dancing Script", cursive !important;
+    // font-family: 'Mynerve' !important;
     letter-spacing: 2px;
     font-style: normal;
     font-size: 50px !important;
@@ -56,16 +84,20 @@ h1 {
 h2 {
     // font-family: "Lora", serif !important;
     font-family: "Dancing Script", cursive !important;
+    // font-family: 'Mynerve' !important;
     letter-spacing: 2px;
-    font-style: normal;
+    font-style: normal !important;
     font-size: 30px !important;
+    color: #e8e1d1 !important;
 }
 
 p {
     // font-family: sans-serif !important;
     font-family: "Dancing Script", cursive !important;
+    // font-family: 'Mynerve';
     letter-spacing: 2px;
     margin-bottom: 0px;
+    color: #e8e1d1 !important;
 }
 
 .center-align-vertical {
@@ -525,13 +557,4 @@ p {
 }
 .pb-6 {
     padding-bottom: 1.5rem !important;
-}
-
-html,
-body {
-    height: 100%;
-}
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

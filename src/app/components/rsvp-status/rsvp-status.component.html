@@ -1,0 +1,29 @@
+<div class="mt-6 col-8 mx-auto">
+
+  <div class="row justify-content-end mb-6">
+    <p class="center-align-vertical mb-0 text-size-22">Filter category: </p>
+    <mat-radio-group [(ngModel)]="statusFilterGroup">
+      <mat-radio-button value="all"><p class="mb-0 text-size-22">All</p></mat-radio-button>
+      <mat-radio-button value="accepted"><p class="mb-0 text-size-22">Accepted</p></mat-radio-button>
+      <mat-radio-button value="declined"><p class="mb-0 text-size-22">Declined</p></mat-radio-button>
+      <mat-radio-button value="none"><p class="mb-0 text-size-22">None</p></mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <table class="mb-6">
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>RSVP Date</th>
+      <th>RSVP Status</th>
+    </tr>
+      <tr *ngFor="let user of fullWeddingPartyList">
+    <ng-container class="container-style" *ngIf="statusFilterGroup === 'all' || (statusFilterGroup === 'none' && !user.rsvpStatus) || (statusFilterGroup !== 'all' && statusFilterGroup !== 'none' && statusFilterGroup === user.rsvpStatus)">
+        <td class="text-capitilize">{{ user.firstName }}</td>
+        <td class="text-capitilize">{{ user.lastName }}</td>
+        <td class="text-capitilize">{{ user.rsvpUpdateDate | date:'mediumDate' }}</td>
+        <td class="text-capitilize" [ngClass]="{'error-text': user.rsvpStatus === 'declined'}">{{ user.rsvpStatus }}</td>
+    </ng-container>
+      </tr>
+  </table>
+</div>

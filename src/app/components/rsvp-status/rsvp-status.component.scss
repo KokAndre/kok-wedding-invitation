@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #e8e1d1;
+    border-radius: 20PX;
+}
+
+th {
+    border-bottom: 5px double #e8e1d1;
+    text-align: left;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 30px !important;
+}
+
+td {
+    border-bottom: 2px solid #e8e1d1;
+    text-align: left;
+    padding: 12px;
+    // font-weight: bold;
+    font-size: 22px !important;
+}
+
+.container-style {
+    width: 100%;
+    display: contents;
+}

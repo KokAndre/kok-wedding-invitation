@@ -18,6 +18,8 @@ import { ErrorScreenComponent } from './components/error-screen/error-screen.com
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
+import { FaqComponent } from './components/faq/faq.component';
+import { RsvpStatusComponent } from './components/rsvp-status/rsvp-status.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FormsModule } from '@angular/forms';
     DressCodeComponent,
     AccommodationComponent,
     RsvpComponent,
-    ErrorScreenComponent
+    ErrorScreenComponent,
+    FaqComponent,
+    RsvpStatusComponent
   ],
   imports: [
     BrowserModule,

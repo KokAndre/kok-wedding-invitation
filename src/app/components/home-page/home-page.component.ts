@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -21,6 +21,8 @@ export class HomePageComponent implements OnInit {
   public displayMinutes: any;
   public displaySeconds: any;
 
+  @Input() public isMobileView = false;
+
   constructor(public ref: ChangeDetectorRef){ }
 
 
@@ -36,7 +38,7 @@ export class HomePageComponent implements OnInit {
 
   public myTimer() {
     this.currentDate = new Date();
-    this.targetDate = new Date(2024, 7, 27);
+    this.targetDate = new Date(2024, 6, 27);
     this.cDateMillisecs = this.currentDate.getTime();
     this.tDateMillisecs = this.targetDate.getTime();
     this.difference = this.tDateMillisecs - this.cDateMillisecs;

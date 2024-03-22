@@ -1,30 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ScheduleItem } from 'src/app/models/schedule-item.model';
-// import * as scheduleListItems from './schedule-data.json';
 
 const scheduleListItems = [
   {
     "heading": "Welcome drinks",
-    "description": "Have a few drinks and chats before the formalities.",
-    "time": "4:00pm",
+    "description": "Have a few drinks and snacks before the formalities.",
+    "time": "3:00pm",
     "imageName": "welcome-drinks.jpg"
   },
   {
     "heading": "Ceremony",
     "description": "Time to make it official!",
-    "time": "5:00pm",
+    "time": "4:00pm",
     "imageName": "ceremony.jpeg"
   },
   {
-    "heading": "Cocktail reception",
-    "description": "Enjoy some delicious cocktail while the bride anf groom takes photos.",
-    "time": "6:00pm",
-    "imageName": "cocktail-reception.jpg"
+    "heading": "Snacks and drinks",
+    "description": "Enjoy some delicious snacks and drinks while the bride and groom takes photos.",
+    "time": "4:45pm",
+    "imageName": "snacks-and-drinks.jpg"
   },
   {
     "heading": "Friends and family photos",
     "description": "Join the bride and groom for photos.",
-    "time": "6:30pm",
+    "time": "5:30pm",
     "imageName": "friends-and-family-photos.jpg"
   },
   {
@@ -48,11 +47,11 @@ const scheduleListItems = [
 })
 export class ScheduleComponent implements OnInit {
   public scheduleList = new Array<ScheduleItem>;
+  
+  @Input() public isMobileView = false;
 
   ngOnInit() {
     this.scheduleList.push(...scheduleListItems);
-
-    console.log('SCHEDULE LIST: ', this.scheduleList);
   }
 
 }

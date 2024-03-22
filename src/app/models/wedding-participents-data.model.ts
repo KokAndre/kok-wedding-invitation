@@ -5,4 +5,5 @@ export class WeddingParticipentsData {
     description: string = '';
     rsvpStatus: string = '';
     rsvpUpdateDate: string = '';
+    isAdmin: string = '0';
 }

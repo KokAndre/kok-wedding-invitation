@@ -1,0 +1,23 @@
+<h1 class="my-6 pb-6 text-center">FAQ's</h1>
+
+<div class="mx-auto mb-4" [ngClass]="isMobileView ? 'col-12 px-3' : 'col-6'">
+  <mat-accordion>
+    <div *ngFor="let question of questoinsList; let first = first" [ngClass]="{'mt-6' : !first}">
+      <mat-expansion-panel hideToggle (opened)="question.isPanelExpanded= true" (closed)="question.isPanelExpanded= false">
+        <mat-expansion-panel-header class="px-3">
+          <div class="row expansion-panel-header-row">
+            <div class="col-11 my-auto">
+              <h2 class="mb-0 text-capitilize">{{ question.header }}</h2>
+            </div>
+            <div class="col-1 my-auto">
+              <mat-icon [ngClass]="{'rotate-expansion-panel-icon': question.isPanelExpanded}" class="expansion-panel-icon"
+                aria-hidden="false" fontIcon="expand_more"></mat-icon>
+            </div>
+          </div>
+        </mat-expansion-panel-header>
+        <p class="text-size-22 mb-0">{{ question.boady }}</p>
+      </mat-expansion-panel>
+    </div>
+
+  </mat-accordion>
+</div>
