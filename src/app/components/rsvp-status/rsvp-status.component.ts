@@ -10,6 +10,7 @@ export class RsvpStatusComponent implements OnInit {
   public statusFilterGroup = 'all';
 
   @Input() public fullWeddingPartyList = new Array<WeddingParticipentsData>();
+  @Input() public isMobileView: boolean = false;
 
   constructor() { }
 
