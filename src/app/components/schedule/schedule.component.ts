@@ -12,31 +12,33 @@ const scheduleListItems = [
     "heading": "Ceremony",
     "description": "Time to make it official!",
     "time": "4:00pm",
-    "imageName": "ceremony.jpeg"
+    "imageName": "ceremony.webp"
   },
   {
     "heading": "Snacks and drinks",
     "description": "Enjoy some delicious snacks and drinks while the bride and groom takes photos.",
-    "time": "4:45pm",
-    "imageName": "snacks-and-drinks.jpg"
+    "time": "4:30pm",
+    "imageName": "snacks-and-drinks.webp"
   },
   {
     "heading": "Friends and family photos",
     "description": "Join the bride and groom for photos.",
-    "time": "5:30pm",
-    "imageName": "friends-and-family-photos.jpg"
+    "time": "6:00pm",
+    "imageName": "friends-and-family-photos.jpg",
+    "rightAlign": true
   },
   {
     "heading": "Dinner time",
     "description": "Enjoy a buffet style dinner in the beautiful reception.",
-    "time": "7:30pm",
-    "imageName": "dinner-reception.webp"
+    "time": "7:00pm",
+    "imageName": "dinner-reception.jpg"
   },
   {
-    "heading": "Dancing and drinks",
+    "heading": "Drinks and celebrations",
     "description": "Time to let loose and celebrate the newlyweds!",
-    "time": "8:30pm",
-    "imageName": "dancing-and-drinks.jpeg"
+    "time": "9:00pm",
+    "imageName": "dancing-and-drinks.jpeg",
+    "leftAlign": true
   }
 ]
 

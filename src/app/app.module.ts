@@ -20,6 +20,7 @@ import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { FaqComponent } from './components/faq/faq.component';
 import { RsvpStatusComponent } from './components/rsvp-status/rsvp-status.component';
+import { OurStoryComponent } from './components/our-story/our-story.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RsvpStatusComponent } from './components/rsvp-status/rsvp-status.compon
     RsvpComponent,
     ErrorScreenComponent,
     FaqComponent,
-    RsvpStatusComponent
+    RsvpStatusComponent,
+    OurStoryComponent
   ],
   imports: [
     BrowserModule,

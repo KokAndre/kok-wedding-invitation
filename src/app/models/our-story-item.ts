@@ -1,7 +1,7 @@
-export class ScheduleItem {
+export class OurStoryItem {
     heading: string = '';
     description: string = '';
-    time: string = '';
+    date: string = '';
     imageName: string = '';
     rightAlign?: boolean = false;
     leftAlign?: boolean = false;

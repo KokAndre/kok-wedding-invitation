@@ -4,14 +4,15 @@ import { AppHelpers } from 'src/app/helpers/app-helpers.functions';
 import { WeddingParticipentsData } from 'src/app/models/wedding-participents-data.model';
 
 enum availableScreensEnum {
-  Home = 'home',
-  WeddingParty = 'weddingparty',
-  Venue = 'venue',
-  Schedule = 'schedule',
-  FAQ = 'faq',
-  RSVP = 'rsvp',
-  RSVPStatus = 'rsvpstatus',
-  ErrorScreen = 'errorscreen'
+  Home = 'Home',
+  OurStory = 'Our story',
+  WeddingParty = 'Wedding party',
+  Venue = 'Venue',
+  Schedule = 'Schedule',
+  FAQ = "FAQ's",
+  RSVP = 'RSVP',
+  RSVPStatus = 'RSVP status',
+  ErrorScreen = 'Error screen'
 }
 
 @Component({

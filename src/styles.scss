@@ -10,30 +10,37 @@ body {
     background-color: #e8e1d1;
     height: 100%;
 
-    font-family: "Dancing Script", cursive !important;
-    // font-family: 'Mynerve';
-    letter-spacing: 2px;
+    font-family: "Truculenta", sans-serif;
     font-optical-sizing: auto;
-    // font-weight: <weight>;
-    // font-style: normal;
-    // font-variation-settings:
-    //     "BNCE" 0,
-    //     "INFM" 0,
-    //     "SPAC" 0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+
+    // font-family: "Dancing Script", cursive !important;
+    // // font-family: 'Mynerve';
+    // letter-spacing: 2px;
+    // font-optical-sizing: auto;
+    // // font-weight: <weight>;
+    // // font-style: normal;
+    // // font-variation-settings:
+    // //     "BNCE" 0,
+    // //     "INFM" 0,
+    // //     "SPAC" 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
     display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .example {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
 
 // @font-face {
 //     font-family: 'Mynerve';
@@ -43,14 +50,21 @@ body::-webkit-scrollbar {
 // }
 
 .mat-mdc-raised-button {
-    font-family: "Dancing Script", cursive !important;
-    // font-family: 'Mynerve';
-    letter-spacing: 2px;
+    // font-family: "Dancing Script", cursive !important;
+    // // font-family: 'Mynerve';
+    // letter-spacing: 2px;
+    // font-optical-sizing: auto;
+    // font-variation-settings:
+    //     "BNCE" 0,
+    //     "INFM" 0,
+    //     "SPAC" 0;
+
+    font-family: "Truculenta", sans-serif;
     font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     font-variation-settings:
-        "BNCE" 0,
-        "INFM" 0,
-        "SPAC" 0;
+      "wdth" 100;
 }
 
 .mat-mdc-radio-button .mdc-form-field {
@@ -73,29 +87,58 @@ body::-webkit-scrollbar {
 }
 
 h1 {
-    // font-family: "Lora", serif !important;
-    font-family: "Dancing Script", cursive !important;
-    // font-family: 'Mynerve' !important;
-    letter-spacing: 2px;
-    font-style: normal;
+    // // font-family: "Lora", serif !important;
+    // font-family: "Dancing Script", cursive !important;
+    // // font-family: 'Mynerve' !important;
+    // letter-spacing: 2px;
+    // font-style: normal;
+
+
+
+    font-family: "Truculenta", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+    font-variation-settings:
+      "wdth" 100 !important;
+
+
     font-size: 50px !important;
 }
 
 h2 {
-    // font-family: "Lora", serif !important;
-    font-family: "Dancing Script", cursive !important;
-    // font-family: 'Mynerve' !important;
-    letter-spacing: 2px;
+    // // font-family: "Lora", serif !important;
+    // font-family: "Dancing Script", cursive !important;
+    // // font-family: 'Mynerve' !important;
+    // letter-spacing: 2px;
+    // font-style: normal !important;
+
+    font-family: "Truculenta", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 300 !important;
     font-style: normal !important;
+    font-variation-settings:
+      "wdth" 100 !important;
+
     font-size: 30px !important;
     color: #e8e1d1 !important;
 }
 
 p {
-    // font-family: sans-serif !important;
-    font-family: "Dancing Script", cursive !important;
-    // font-family: 'Mynerve';
-    letter-spacing: 2px;
+    // // font-family: sans-serif !important;
+    // font-family: "Dancing Script", cursive !important;
+    // // font-family: 'Mynerve';
+    // letter-spacing: 2px;
+
+
+    font-family: "Truculenta", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+
+
     margin-bottom: 0px;
     color: #e8e1d1 !important;
 }
@@ -118,6 +161,10 @@ p {
 
 .text-right {
     text-align: right;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 .text-capitilize {
@@ -458,6 +505,10 @@ p {
     padding-right: 1.5rem !important;
 }
 
+.py-0 {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
 .py-1 {
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;

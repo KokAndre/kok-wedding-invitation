@@ -6,69 +6,98 @@
         </div>
         <div *ngIf="!isMobileView" class="col-9 align-right center-align-vertical">
             <div class="row h-100 w-100 justify-content-end">
-                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Home)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Home}">
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Home)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.Home}">
                     <p class="m-2 text-size-22">Home</p>
                 </div>
 
-                <!-- <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.WeddingParty)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.WeddingParty}">
-                    <p class="m-2 text-size-22">Wedding Party</p>
-                </div> -->
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.OurStory)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.OurStory}">
+                    <p class="m-2 text-size-22">Our story</p>
+                </div>
 
-                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Venue)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Venue}">
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Venue)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.Venue}">
                     <p class="m-2 text-size-22">Venue</p>
                 </div>
 
-                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Schedule)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Schedule}">
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.Schedule)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.Schedule}">
                     <p class="m-2 text-size-22">Schedule</p>
                 </div>
 
-                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.FAQ)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.FAQ}">
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.FAQ)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.FAQ}">
                     <p class="m-2 text-size-22">FAQ's</p>
                 </div>
 
-                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.RSVP)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVP}">
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.RSVP)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVP}">
                     <p class="m-2 text-size-22">RSVP</p>
                 </div>
 
-                <div *ngIf="activeUserData.isAdmin === '1'"  class="pointer transparent-border" (click)="setActiveScreen(availableScreens.RSVPStatus)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
+                <div *ngIf="activeUserData.isAdmin === '1'" class="pointer transparent-border"
+                    (click)="setActiveScreen(availableScreens.RSVPStatus)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
                     <p class="m-2 text-size-22">RSVP Status</p>
                 </div>
             </div>
 
         </div>
         <div *ngIf="isMobileView" class="col-9 mobile-menu-button">
-            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
-                <mat-icon class="mobile-menu-icon">more_vert</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.Home)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Home}">
-                    <p class="m-2 text-size-22">Home</p>
-                </div>
 
-                <!-- <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.WeddingParty)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.WeddingParty}">
-                    <p class="m-2 text-size-22">Wedding Party</p>
-                </div> -->
+            <div class="row justify-content-end align-items-center">
+                <h2 *ngIf="activeScreen !== availableScreens.Home" class="mb-0 screen-title-text">{{ activeScreen }}
+                </h2>
 
-                <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.Venue)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Venue}">
-                    <p class="m-2 text-size-22">Venue</p>
-                </div>
 
-                <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.Schedule)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.Schedule}">
-                    <p class="m-2 text-size-22">Schedule</p>
-                </div>
+                <button class="py-0 pt-1" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+                    <mat-icon class="mobile-menu-icon">more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <div class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.Home)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.Home}">
+                        <p class="m-2 text-size-22">Home</p>
+                    </div>
 
-                <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.FAQ)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.FAQ}">
-                    <p class="m-2 text-size-22">FAQ's</p>
-                </div>
+                    <div class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.OurStory)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.OurStory}">
+                        <p class="m-2 text-size-22">Our story</p>
+                    </div>
 
-                <div class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.RSVP)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVP}">
-                    <p class="m-2 text-size-22">RSVP</p>
-                </div>
+                    <div class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.Venue)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.Venue}">
+                        <p class="m-2 text-size-22">Venue</p>
+                    </div>
 
-                <div *ngIf="activeUserData.isAdmin === '1'" class="pointer transparent-border"  mat-menu-item (click)="setActiveScreen(availableScreens.RSVPStatus)" [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
-                    <p class="m-2 text-size-22">RSVP Status</p>
-                </div>
-              </mat-menu>
+                    <div class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.Schedule)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.Schedule}">
+                        <p class="m-2 text-size-22">Schedule</p>
+                    </div>
+
+                    <div class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.FAQ)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.FAQ}">
+                        <p class="m-2 text-size-22">FAQ's</p>
+                    </div>
+
+                    <div class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.RSVP)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVP}">
+                        <p class="m-2 text-size-22">RSVP</p>
+                    </div>
+
+                    <div *ngIf="activeUserData.isAdmin === '1'" class="pointer transparent-border" mat-menu-item
+                        (click)="setActiveScreen(availableScreens.RSVPStatus)"
+                        [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
+                        <p class="m-2 text-size-22">RSVP Status</p>
+                    </div>
+                </mat-menu>
+            </div>
         </div>
     </div>
 
@@ -82,8 +111,8 @@
         <ng-container [ngSwitch]="activeScreen">
             <ng-container *ngSwitchCase="availableScreens.Home" [ngTemplateOutlet]="HomeTemplate">
             </ng-container>
-            <!-- <ng-container *ngSwitchCase="availableScreens.WeddingParty" [ngTemplateOutlet]="WeddingPartyTemplate">
-            </ng-container> -->
+            <ng-container *ngSwitchCase="availableScreens.OurStory" [ngTemplateOutlet]="OurStoryTemplate">
+            </ng-container>
             <ng-container *ngSwitchCase="availableScreens.Venue" [ngTemplateOutlet]="VenueTemplate">
             </ng-container>
             <ng-container *ngSwitchCase="availableScreens.Schedule" [ngTemplateOutlet]="ScheduleTemplate">
@@ -106,9 +135,9 @@
     <app-home-page [isAdmin]="activeUserData.isAdmin === '1'" [isMobileView]="isMobileView"></app-home-page>
 </ng-template>
 
-<!-- <ng-template #WeddingPartyTemplate>
-    <app-wedding-party [weddingPartyList]="weddingPartyList"></app-wedding-party>
-</ng-template> -->
+<ng-template #OurStoryTemplate>
+    <app-our-story [isMobileView]="isMobileView"></app-our-story>
+</ng-template>
 
 <ng-template #VenueTemplate>
     <app-venue [isMobileView]="isMobileView"></app-venue>
@@ -123,8 +152,9 @@
 </ng-template>
 
 <ng-template #RSVPTemplate>
-    <app-rsvp [userData]="activeUserData"  [isMobileView]="isMobileView" (navigateToErrorScreenEmit)="naviagteToErrorScreen($event)"
-    (updateUserDataEmit)="updateUserData($event)"></app-rsvp>
+    <app-rsvp [userData]="activeUserData" [isMobileView]="isMobileView"
+        (navigateToErrorScreenEmit)="naviagteToErrorScreen($event)"
+        (updateUserDataEmit)="updateUserData($event)"></app-rsvp>
 </ng-template>
 
 <ng-template #RSVPStatusTemplate>

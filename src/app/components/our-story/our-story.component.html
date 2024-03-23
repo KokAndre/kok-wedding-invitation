@@ -1,0 +1,23 @@
+<!-- <h1 class="my-6 pb-6 text-center">Our story</h1> -->
+
+<div class="mt-6">
+  <div *ngFor="let timelineItem of timelineList; let i = index; let first = first; let last = last"
+    [ngClass]="{'pb-6': last, 'mx-6': !isMobileView}">
+    <div class="justify-content-center" [ngClass]="(i + 1)%2 ? 'row' : 'reverse-row text-right'" style="height: 300px !important">
+      <div
+        [ngClass]="isMobileView ? timelineItem.rightAlign ? 'col-5 mobile-timeline-image align-background-right' : timelineItem.leftAlign ? 'col-5 mobile-timeline-image align-background-left' : 'col-5 mobile-timeline-image' : 'col-4 timeline-image'"
+        class="" style="background-image: url(assets/images/timeline/{{timelineItem.imageName}})">
+      </div>
+      <div class="col-1">
+        <div class="center-timeline-line" [ngClass]="{'first-item': first, 'last-item': last}"></div>
+        <div class="center-timeline-line-item"></div>
+      </div>
+      <div [ngClass]="isMobileView ? 'col-5' : 'col-4'" class="center-align-vertical">
+        <h1 *ngIf="!isMobileView" class="mb-6" [innerHTML]="timelineItem.heading"></h1>
+        <h2 *ngIf="isMobileView" class="mb-6" [innerHTML]="timelineItem.heading"></h2>
+        <p class="text-size-22 mb-6">{{ timelineItem.date | date:'mediumDate' }}</p>
+        <p class="text-size-22 mb-0" [innerHTML]="timelineItem.description"></p>
+      </div>
+    </div>
+  </div>
+</div>

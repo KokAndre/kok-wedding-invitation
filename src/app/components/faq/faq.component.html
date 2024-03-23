@@ -1,6 +1,6 @@
-<h1 class="my-6 pb-6 text-center">FAQ's</h1>
+<!-- <h1 class="my-6 pb-6 text-center">FAQ's</h1> -->
 
-<div class="mx-auto mb-4" [ngClass]="isMobileView ? 'col-12 px-3' : 'col-6'">
+<div class="mx-auto mb-4 mt-6" [ngClass]="isMobileView ? 'col-12 px-3' : 'col-6'">
   <mat-accordion>
     <div *ngFor="let question of questoinsList; let first = first" [ngClass]="{'mt-6' : !first}">
       <mat-expansion-panel hideToggle (opened)="question.isPanelExpanded= true" (closed)="question.isPanelExpanded= false">
