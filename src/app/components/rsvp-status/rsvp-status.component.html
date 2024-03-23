@@ -16,7 +16,8 @@
       <th>Surname</th>
       <th>RSVP Date</th>
       <th>RSVP Status</th>
-      <th *ngIf="!isMobileView">Link</th>
+      <th>Accommodation</th>
+      <!-- <th *ngIf="!isMobileView">Link</th> -->
     </tr>
       <tr *ngFor="let user of fullWeddingPartyList">
     <ng-container class="container-style" *ngIf="statusFilterGroup === 'all' || (statusFilterGroup === 'none' && !user.rsvpStatus) || (statusFilterGroup !== 'all' && statusFilterGroup !== 'none' && statusFilterGroup === user.rsvpStatus)">
@@ -24,7 +25,8 @@
         <td class="text-capitilize">{{ user.lastName }}</td>
         <td class="text-capitilize">{{ user.rsvpUpdateDate | date:'mediumDate' }}</td>
         <td class="text-capitilize" [ngClass]="{'error-text': user.rsvpStatus === 'declined'}">{{ user.rsvpStatus }}</td>
-        <td *ngIf="!isMobileView" class="text-lowercase">https://kokandre.github.io/kok-wedding-invitation/{{ user.firstName }}-{{ user.lastName }}</td>
+        <td class="text-capitilize">{{ user.nightsAccommodation }}</td>
+        <!-- <td *ngIf="!isMobileView" class="text-lowercase">https://kokandre.github.io/kok-wedding-invitation/{{ user.firstName }}-{{ user.lastName }}</td> -->
     </ng-container>
       </tr>
   </table>

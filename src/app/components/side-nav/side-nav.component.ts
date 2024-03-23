@@ -60,6 +60,10 @@ export class SideNavComponent implements OnInit {
       if (this.activeUser.includes('-')) {
         this.activeUserFirstName = this.activeUser.split('-')[0];
         this.activeUserLastName = this.activeUser.split('-')[1];
+
+        if (this.activeUserLastName.includes('%20')) {
+          this.activeUserLastName = this.activeUserLastName.replaceAll('%20', ' ');
+        }
       }
     }
   }
