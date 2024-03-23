@@ -33,6 +33,11 @@ const questionsList = [
     "isPanelExpanded": false
   },
   {
+    "header": "Will accommodation be provided?",
+    "boady": "Accommodation can be arranged for Friday and Saturday night. Kindly specify your accommodation needs in the RSVP tab.",
+    "isPanelExpanded": false
+  },
+  {
     "header": "When Should I RSVP?",
     "boady": "Please RSVP before 30 April 2024",
     "isPanelExpanded": false

@@ -4,7 +4,19 @@
 
 <div *ngIf="userData.rsvpUpdateDate" class="mt-6">
     <h2 class="text-center pt-6">On <span>{{ userData.rsvpUpdateDate| date:'mediumDate' }}</span> you RSVP'd: <span
-            class="text-capitilize">{{ userData.rsvpStatus }}</span></h2>
+            class="text-capitilize">{{ userData.rsvpStatus }}</span>.</h2>
+
+    <div *ngIf="userData.rsvpStatus !== 'declined'">
+        <h2 *ngIf="userData.nightsAccommodation === '0'" class="text-center pt-6">You selected to arrange your own
+            accommodation.</h2>
+        <h2 *ngIf="userData.nightsAccommodation === '1'" class="text-center pt-6">You selected accommodation for
+            Saturday
+            night only.</h2>
+        <h2 *ngIf="userData.nightsAccommodation === '2'" class="text-center pt-6">You selected accommodation for Friday
+            and
+            Saturday night.</h2>
+    </div>
+
 
     <div *ngIf="!displayCaptureRSVP" class="row justify-content-center pt-6">
         <button mat-raised-button class="mx-auto text-size-22" (click)="displayCaptureRSVP = true">Change RSVP</button>
@@ -19,12 +31,12 @@
     </div>
 </div>
 
-<div *ngIf="displayCaptureRSVP" class="pt-6 mx-auto text-center" [ngClass]="isMobileView ? 'col-12' : 'col-6'">
+<div *ngIf="displayCaptureRSVP" class="pt-6 mx-auto text-center col-12 px-2">
 
     <h2 class="mt-6">Please set RSVP status:</h2>
 
     <mat-radio-group class="col-12" [(ngModel)]="rsvpStatus">
-        <mat-radio-button class="mr-6"  value="accepted">
+        <mat-radio-button class="mr-6" value="accepted">
             <p class="mb-0 text-size-30">Accept</p>
         </mat-radio-button>
         <mat-radio-button value="declined">
@@ -32,9 +44,31 @@
         </mat-radio-button>
     </mat-radio-group>
 
-    <div class="row justify-content-center pt-6">
-        <button mat-raised-button class="mx-auto text-size-22" (click)="submitRSVPClicked()">{{ isLoading ? 'Please wait...' : 'Submit'}}</button>
+    <div *ngIf="rsvpStatus !== 'declined'">
+        <h2 class="mt-4">Please indicate the evening for which you require
+            accommodation:</h2>
+
+        <mat-radio-group class="col-12" [(ngModel)]="nightsAccommodation">
+            <mat-radio-button class="mr-6" value="0">
+                <p class="mb-0 text-size-30">I will arrange my own</p>
+            </mat-radio-button>
+            <mat-radio-button class="mr-6" value="1">
+                <p class="mb-0 text-size-30">Saturday</p>
+            </mat-radio-button>
+            <mat-radio-button value="2">
+                <p class="mb-0 text-size-30">Friday and Saturday</p>
+            </mat-radio-button>
+        </mat-radio-group>
     </div>
 
-    <h2 *ngIf="displayErrorMessage && !rsvpStatus" class="error-text mt-6"><span class="text-size-30">*</span> Please select an RSVP value!</h2>
+
+    <div class="row justify-content-center pt-6">
+        <button mat-raised-button class="mx-auto text-size-22" (click)="submitRSVPClicked()">{{ isLoading ? 'Please
+            wait...' : 'Submit'}}</button>
+    </div>
+
+    <h2 *ngIf="displayErrorMessage && !rsvpStatus" class="error-text mt-6"><span class="text-size-30">*</span> Please
+        select an RSVP value!</h2>
+    <h2 *ngIf="displayErrorMessage && !nightsAccommodation" class="error-text mt-6"><span class="text-size-30">*</span> Please
+        select accommodation requirements!</h2>
 </div>

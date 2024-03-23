@@ -20,6 +20,7 @@ export class RsvpComponent implements OnInit {
   public dataArray = [{ id: 0, name: '' }];
   public displayCaptureRSVP = false;
   public rsvpStatus = '';
+  public nightsAccommodation = '';
   public displayErrorMessage = false;
   public isLoading = false;
 
@@ -35,14 +36,14 @@ export class RsvpComponent implements OnInit {
     }
   }
 
-  testJsonAdd() {
+  // testJsonAdd() {
 
-    fetch('https://kok-wedding-invitation-api.000webhostapp.com/participents/read-all.php', {
-      method: 'get'
-    })
-      .then(response => response.json())
-      .then(data => console.log(data));
-  }
+  //   fetch('https://kok-wedding-invitation-api.000webhostapp.com/participents/read-all.php', {
+  //     method: 'get'
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => console.log(data));
+  // }
 
   public getAll() {
     const serviceEndpoint = 'https://kok-wedding-invitation-api.000webhostapp.com/participents/read-all.php';
@@ -59,11 +60,11 @@ export class RsvpComponent implements OnInit {
 
   public submitRSVPClicked() {
     if (!this.isLoading) {
-      this.isLoading = true;
-      if (!this.rsvpStatus) {
+      if (!this.rsvpStatus || (this.rsvpStatus !== 'declined' && !this.nightsAccommodation)) {
         this.displayErrorMessage = true;
       } else {
         this.displayErrorMessage = false;
+        this.isLoading = true;
         this.submitRSVPData();
       }
     }
@@ -77,6 +78,9 @@ export class RsvpComponent implements OnInit {
     requestData.id = this.userData.id;
     requestData.rsvpUpdateDate = currentDate;
     requestData.rsvpStatus = this.rsvpStatus;
+    requestData.nightsAccommodation = this.rsvpStatus === 'declined' ? '0' : this.nightsAccommodation
+
+    console.log('ACCOMMODATION: ', this.nightsAccommodation);
 
     fetch(AppHelpers.postApiUrl(), {
       method: 'post',
@@ -97,6 +101,7 @@ export class RsvpComponent implements OnInit {
 
           // Clear the data
           this.rsvpStatus = '';
+          this.nightsAccommodation = '';
           this.displayCaptureRSVP = false;
         }
       });

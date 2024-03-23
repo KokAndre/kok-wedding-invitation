@@ -4,6 +4,7 @@ export class WeddingParticipentsData {
     lastName: string = '';
     description: string = '';
     rsvpStatus: string = '';
+    nightsAccommodation: string = '0';
     rsvpUpdateDate: string = '';
     isAdmin: string = '0';
 }
