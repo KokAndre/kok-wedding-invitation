@@ -20,7 +20,7 @@ export class HomePageComponent implements OnInit {
   public displayHours: any;
   public displayMinutes: any;
   public displaySeconds: any;
-  public releaseVersion = '2024-03-22 - 1';
+  public releaseVersion = '2024-03-23 - 1';
 
   @Input() public isMobileView = false;
   @Input() public isAdmin = false;
