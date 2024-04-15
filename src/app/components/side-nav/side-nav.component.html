@@ -36,6 +36,11 @@
                     <p class="m-2 text-size-22">RSVP</p>
                 </div>
 
+                <div class="pointer transparent-border" (click)="setActiveScreen(availableScreens.WeddingParty)"
+                    [ngClass]="{'active-nav-link': activeScreen === availableScreens.WeddingParty}">
+                    <p class="m-2 text-size-22">Wedding Party</p>
+                </div>
+
                 <div *ngIf="activeUserData.isAdmin === '1'" class="pointer transparent-border"
                     (click)="setActiveScreen(availableScreens.RSVPStatus)"
                     [ngClass]="{'active-nav-link': activeScreen === availableScreens.RSVPStatus}">
@@ -123,6 +128,8 @@
             </ng-container>
             <ng-container *ngSwitchCase="availableScreens.RSVPStatus" [ngTemplateOutlet]="RSVPStatusTemplate">
             </ng-container>
+            <ng-container *ngSwitchCase="availableScreens.WeddingParty" [ngTemplateOutlet]="WeddingPartyTemplate">
+            </ng-container>
             <ng-container *ngSwitchCase="availableScreens.ErrorScreen" [ngTemplateOutlet]="ErrorScreenTemplate">
             </ng-container>
         </ng-container>
@@ -149,6 +156,10 @@
 
 <ng-template #FAQTemplate>
     <app-faq [isMobileView]="isMobileView"></app-faq>
+</ng-template>
+
+<ng-template #WeddingPartyTemplate>
+    <app-wedding-party [weddingPartyList]="fullWeddingPartyList"></app-wedding-party>
 </ng-template>
 
 <ng-template #RSVPTemplate>
